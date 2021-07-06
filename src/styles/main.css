@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1e3cb;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -20px;
+}
+
+/*
+ * Header
+ *
+ */
+
+.header {
+  display: grid;
+  background-color: #ca5116;
+  min-height: 10px;
+  transition: min-height 0.3s;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header_inner {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.header_title {
+  font-weight: 300;
+  font-size: 2em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+  color: #f1e3cb;
+}
+
+.header_menu {
+  color: #f1e3cb;
+  position: fixed;
+  font-size: 22px;
+  display: block;
+  width: 20px;
+  right: 5%;
+  top: 17px;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*
+ * Top level navigation
+ */
+
+.nav {
+  width: 100%;
+}
+
+.nav_list {
+  width: 100%;
+  padding: 0;
+  margin: 7px 0;
+  text-align: right;
+}
+
+.nav_item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 1.3em;
+  text-decoration: none;
+  color: #f1e3cb;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.nav a:hover {
+  color: #581c0c;
+}
+
+.nav_logo {
+  display: none;
+}
+
+.img_logo {
+  width: 50px;
+  position: relative;
+  top: 7px;
+  left: 7px;
+}
+
+.img_logo_drawer {
+  width: 80%;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('../public/font/Poppins-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+    url('../public/font/MaterialIcons-Regular.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Jumbotron */
+/*
+ * Jumbotron
+ */
+
+#jumbotron {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/hero-image_1.jpg');
+  background-color: #ca5116;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+
+.jumbotron_inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.jumbotron_subtitle {
+  color: #581c0c;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 5%;
+  padding: 1%;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img_jumbotron {
+  width: 60%;
+}
+
+#content {
+  padding: 0 6% 6% 6%;
+}
+
+hr {
+  width: 15%;
+  border: 2px solid #581c0c;
+  margin-top: -15px;
+  border-radius: 5px;
+}
+
+.content_header {
+  margin-bottom: 35px;
+}
+
+.content_title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #581c0c;
+}
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background-color: #f1e3cb;
+  color: #581c0c;
+  padding: 10px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+#overlay {
+  background: #f1e3cb;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+/*loader*/
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  margin-left: -30px;
+  margin-top: -25px;
+  border: 8px solid #f1e3cb;
+  border-radius: 50%;
+  border-top: 8px solid #581c0c;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

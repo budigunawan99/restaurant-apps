@@ -1,0 +1,69 @@
+/* Responsive css */
+@media screen and (min-width: 750px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .header_menu {
+    display: none;
+  }
+
+  .nav_list {
+    max-width: 800px;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  #content{
+    padding-bottom: 10%;
+  }
+  
+  .nav {
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    background-color: #f1e3cb;
+    max-width: 250px;
+    position: fixed;
+    height: 100%;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav_item {
+    display: list-item;
+    border-bottom: 1px solid #581c0c;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav a {
+    color: #581c0c;
+  }
+
+  .jumbotron_subtitle {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .nav_logo {
+    display: block;
+    padding: 10%;
+    text-align: center;
+  }
+
+  .nav a:hover {
+    color: #ca5116;
+  }
+}
