@@ -1,0 +1,23 @@
+{
+      "name": "Katalog Restoran Terbaik",
+      "short_name": "KopiTiam",
+      "description": "The best cafe in Southeast Asia",
+      "start_url": "/index.html",
+      "display": "standalone",
+      "background_color": "#f1e3cb",
+      "theme_color": "#ca5116",
+      "icons": [
+        {
+          "src": "/icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "/icons/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any maskable"
+        }
+      ]
+}

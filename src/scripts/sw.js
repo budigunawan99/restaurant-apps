@@ -36,6 +36,20 @@ if (workbox) {
     ({url}) => url.origin === CONFIG.BASE_URL,
     staleWhileRevalidateStrategy,
   );
+
+  workbox.routing.registerRoute(
+    /\.(?:png|gif|jpg|jpeg|svg|ico|webp)$/,
+    new workbox.strategies.CacheFirst({
+      cacheName: 'runtime-images',
+      plugins: [
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+          statuses: [0, 200],
+          maxEntries: 60,
+          maxAgeSeconds: 30 * 24 * 60 * 60,
+        }),
+      ],
+    }),
+  );
 } else {
   console.log(`Workbox gagal dimuat`);
 }
