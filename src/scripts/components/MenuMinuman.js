@@ -26,7 +26,10 @@ class MenuMinuman extends HTMLElement {
                   
                   
                   <div class="box">
-                    <img class="box_picture" src="./images/drink_default.png" alt="${this._list.name}"/>
+                    <picture>
+                      <source type="image/webp" srcset="./images/drink_default.webp">
+                      <img class="box_picture" src="./images/drink_default.png" alt="${this._list.name}"/>
+                    </picture>
                     <p tabindex="0">${this._list.name}</p>
                   </div>
                   

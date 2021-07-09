@@ -20,8 +20,11 @@ const pageOnError = (message) => `
       
       <article id="empty_article">
             <figure class="empty_article_figure">
-                  <img src="./images/nodata.png" 
-                        alt="Empty Article Image">
+                  <picture>
+                        <source media="(max-width: 1024px)" srcset="./images/nodata-small.png">
+                        <img src="./images/nodata.png" 
+                              alt="Empty Article Image">
+                  </picture>
                   <figcaption>
                         <a href="https://storyset.com/data" aria-label="image attribution link" tabindex="0">Illustration by Freepik Storyset</a>                                   
                   </figcaption>

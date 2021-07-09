@@ -7,7 +7,6 @@ import './UserFeedback';
 import './FavoriteButton';
 import './FormFeedback';
 import CreateSubElement from '../utils/create-sub-element';
-import ScrollToBottom from '../utils/scroll-to-bottom';
 import FavoriteButtonPresenter from '../utils/favorite-button-presenter';
 import PostFeedbackHelper from '../utils/post-feedback-helper';
 import FavoriteRestaurantIdb from '../data/favoriterestaurant-idb';
@@ -141,7 +140,7 @@ class DetailRestaurant extends HTMLElement {
                               background-color: #EC9C6C;
                               overflow-x: hidden;
                               overflow-y: scroll;
-                              max-height: 600px;
+                              max-height: 400px;
                               border-radius: 20px;
                               display: grid;
                               grid-template-columns: 1fr;
@@ -210,8 +209,11 @@ class DetailRestaurant extends HTMLElement {
                         </div>
 
                         <div class="rest_detail">
-                              <img class="rest_picture" src="${CONFIG.BASE_IMAGE_URL}large/${this._list.pictureId}" alt="${this._list.name}" 
-                                    onerror="this.onerror = null; this.src='./images/default.jpg';"/>
+                              <picture>
+                                    <source media="(max-width: 1024px)" srcset="${CONFIG.BASE_IMAGE_URL}small/${this._list.pictureId}" alt="${this._list.name}">
+                                    <img class="rest_picture" src="${CONFIG.BASE_IMAGE_URL}medium/${this._list.pictureId}" alt="${this._list.name}" 
+                                          onerror="this.onerror = null; this.src='./images/default.jpg';"/>
+                              </picture>
                               <div class="rest_info">
                                     <div class="rest_rating">
                                           <h3 tabindex="0">Rating</h3>
@@ -301,7 +303,6 @@ class DetailRestaurant extends HTMLElement {
       element: 'user-feedback',
       parent: feedbackContainer,
     });
-    ScrollToBottom(feedbackContainer);
   }
 
   formFeedbackInit() {

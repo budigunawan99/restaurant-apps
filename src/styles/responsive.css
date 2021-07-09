@@ -1,4 +1,5 @@
 /* Responsive css */
+
 @media screen and (min-width: 750px) {
   header {
     display: grid;
@@ -16,10 +17,10 @@
 }
 
 @media screen and (max-width: 749px) {
-  #content{
+  #content {
     padding-bottom: 10%;
   }
-  
+
   .nav {
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
     z-index: 10;
@@ -65,5 +66,9 @@
 
   .nav a:hover {
     color: #ca5116;
+  }
+
+  #jumbotron {
+    background-image: url('../../dist/images/hero-image_1-small.jpg');
   }
 }

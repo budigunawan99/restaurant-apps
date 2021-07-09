@@ -57,7 +57,10 @@ class UserFeedback extends HTMLElement {
                   
                   <div class="card_content">
                     <div class="card_header">
-                      <img class="feedback_user_pic" src="./images/user.png" alt="${this._list.name}"/>
+                      <picture>
+                        <source type="image/webp" srcset="./images/user.webp">
+                        <img class="feedback_user_pic" src="./images/user.png" alt="${this._list.name}"/>
+                      </picture>
                       <div class="card_header_right">
                         <h4 class="feedback_username" tabindex="0">${this._list.name}</h4>
                         <p class="feedback_date" tabindex="0">${this._list.date}</p>

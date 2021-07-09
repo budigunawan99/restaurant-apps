@@ -26,7 +26,10 @@ class MenuMakanan extends HTMLElement {
                   
                   
                   <div class="box">
-                    <img class="box_picture" src="./images/food_default.png" alt="${this._list.name}"/>
+                    <picture>
+                      <source type="image/webp" srcset="./images/food_default.webp">
+                      <img class="box_picture" src="./images/food_default.png" alt="${this._list.name}"/>
+                    </picture>
                     <p tabindex="0">${this._list.name}</p>
                   </div>              
                 `;

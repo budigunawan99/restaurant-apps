@@ -31,7 +31,7 @@ const PostFeedbackHelper = {
   },
 
   _onSuccess(response) {
-    this._formFeedback.render();
+    this._formFeedback.value = null;
     this._newFeedback(response.customerReviews);
   },
 

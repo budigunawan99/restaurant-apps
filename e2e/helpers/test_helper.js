@@ -24,6 +24,24 @@ class Test extends Helper {
     const titleSelector = await this.seeInShadow(query);
     return await titleSelector.evaluate((el) => el.textContent);
   }
+
+  async fillInShadow({shadowOne, shadowTwo, target, value}) {
+    const page = this.helpers['Puppeteer'].page;
+    await page.evaluate(
+      ({shadowOne, shadowTwo, target, value}) => {
+        document
+          .querySelector(shadowOne)
+          .shadowRoot.querySelector(shadowTwo)
+          .shadowRoot.querySelector(target).value = value;
+      },
+      {shadowOne, shadowTwo, target, value},
+    );
+  }
+
+  async setOffline() {
+    const page = this.helpers['Puppeteer'].page;
+    await page.setOfflineMode(true);
+  }
 }
 
 module.exports = Test;

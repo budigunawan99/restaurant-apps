@@ -12,7 +12,7 @@ class RestaurantListItem extends HTMLElement {
   }
 
   render() {
-    this._shadowRoot.innerHTML = `
+    this._shadowRoot.innerHTML = `                  
                   <style>
                         :host {
                               display: block;
@@ -173,11 +173,11 @@ class RestaurantListItem extends HTMLElement {
                                     </div>                              
                               </div>
                               <figure class="article_thumbnail">
-                                    <img class="article_thumbnail_image" src="${
+                                    <img loading="lazy" width="100%" height="100%" class="article_thumbnail_image" src="${
                                       CONFIG.BASE_IMAGE_URL
-                                    }medium/${this._list.pictureId}" alt="${
-      this._list.name
-    }" onerror="this.onerror = null; 
+                                    }small/${this._list.pictureId}" alt="${
+                                          this._list.name
+                                    }" onerror="this.onerror = null; 
                                     this.src='./images/default.jpg';">                              
                               </figure>
                         </div>
@@ -201,7 +201,7 @@ class RestaurantListItem extends HTMLElement {
                                     Selengkapnya <i class="material-icons" aria-hidden="true">keyboard_arrow_right</i>
                               </a>
                         </div>                     
-                  </article>
+                  </article> 
                 `;
   }
 }

@@ -21,7 +21,11 @@
     <div class="wrapper">
         <header class="header">
             <div class="header_inner" tabindex="0">
-                <img class="img_logo" src="./images/kopihalilintarlogo.png" alt="logo KopiTiam">
+                <picture>
+                    <source type="image/webp" srcset="./images/kopihalilintarlogo.webp">
+                    <img class="img_logo" src="./images/kopihalilintarlogo.png" alt="logo KopiTiam"
+                        width="50" height="50">
+                </picture>              
                 <h1 class="header_title">
                     KopiTiam
                 </h1>
@@ -29,8 +33,13 @@
             <button id="menu" class="header_menu" aria-label="Klik to open sidebar">☰</button>
             <nav id="drawer" class="nav">
                 <ul class="nav_list">
-                    <li class="nav_item nav_logo"><img class="img_logo_drawer" src="./images/kopihalilintartext.png"
-                            alt="logo drawer KopiTiam"></li>
+                    <li class="nav_item nav_logo">
+                        <picture>
+                            <source type="image/webp" srcset="./images/kopihalilintartext.webp">
+                            <img class="img_logo_drawer" src="./images/kopihalilintartext.png"
+                                alt="logo drawer KopiTiam">
+                        </picture>
+                    </li>
                     <li class="nav_item"><a href="#/home">Home</a></li>
                     <li class="nav_item"><a href="#/favorite">Favorite</a></li>
                     <li class="nav_item"><a href="https://www.linkedin.com/in/bnawan/" target="_blank" rel="noopener">About Us</a></li>

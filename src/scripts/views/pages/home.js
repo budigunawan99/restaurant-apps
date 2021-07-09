@@ -6,8 +6,11 @@ const Home = {
     return `
       <section id="jumbotron">
             <div class="jumbotron_inner">
-                  <img class="img_jumbotron" src="./images/kopihalilintartext.png"
-                        alt="Gambar Utama Jumbotron">
+                  <picture>
+                    <source type="image/webp" srcset="./images/kopihalilintartext.webp">
+                    <img class="img_jumbotron" src="./images/kopihalilintartext.png"
+                          alt="Gambar Utama Jumbotron" width="60%" height="60%">
+                  </picture>
                   <p class="jumbotron_subtitle" tabindex="0">Temukan kafe favorit Anda di mana saja dan kapan saja
                         hanya
                         di KopiTiam

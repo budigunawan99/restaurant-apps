@@ -9,6 +9,11 @@ class FormFeedback extends HTMLElement {
     this.render();
   }
 
+  set value(value) {
+    this._shadowRoot.getElementById('nama').value = value;
+    this._shadowRoot.getElementById('review').value = value;
+  }
+
   get value() {
     return {
       id: this._id,
