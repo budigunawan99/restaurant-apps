@@ -210,7 +210,8 @@ class DetailRestaurant extends HTMLElement {
 
                         <div class="rest_detail">
                               <picture>
-                                    <source media="(max-width: 1024px)" srcset="${CONFIG.BASE_IMAGE_URL}small/${this._list.pictureId}" alt="${this._list.name}">
+                                    <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL}small/${this._list.pictureId}" alt="${this._list.name}">
+                                    <source media="(max-width: 1095px)" srcset="${CONFIG.BASE_IMAGE_URL}large/${this._list.pictureId}" alt="${this._list.name}">
                                     <img class="rest_picture" src="${CONFIG.BASE_IMAGE_URL}medium/${this._list.pictureId}" alt="${this._list.name}" 
                                           onerror="this.onerror = null; this.src='./images/default.jpg';"/>
                               </picture>

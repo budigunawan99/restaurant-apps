@@ -75,6 +75,8 @@ Scenario('posting a review successfully', async ({I}) => {
     target: 'button#submit',
   });
 
+  I.waitUntilLoaded();
+
   I.seeInShadow(
     `document.querySelector('detail-restaurant').shadowRoot
       .querySelector('.rest_feedback_content > user-feedback')`,

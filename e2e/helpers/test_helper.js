@@ -20,6 +20,11 @@ class Test extends Helper {
     );
   }
 
+  async waitUntilLoaded() {
+    const page = this.helpers['Puppeteer'].page;
+    await page.waitForTimeout(3000);
+  }
+
   async getTextInShadow(query) {
     const titleSelector = await this.seeInShadow(query);
     return await titleSelector.evaluate((el) => el.textContent);

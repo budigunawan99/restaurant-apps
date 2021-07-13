@@ -6,7 +6,13 @@ import CONFIG from './globals/config';
 
 const {assets} = global.serviceWorkerOption;
 
-const additionalAssets = ['./'];
+const additionalAssets = [
+  './',
+  '/images/hero-image_1.jpg',
+  '/images/hero-image_1-small.jpg',
+  '/images/nodata.png',
+  '/images/nodata-small.png',
+];
 
 const staticAssets = assets.concat(additionalAssets).map((element) => {
   return {url: element, revision: CONFIG.VERSION};
