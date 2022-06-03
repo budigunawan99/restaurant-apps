@@ -1,6 +1,6 @@
 const CONFIG = {
-  BASE_URL: 'https://dicoding-restaurant-api.el.r.appspot.com',
-  BASE_IMAGE_URL: 'https://dicoding-restaurant-api.el.r.appspot.com/images/',
+  BASE_URL: 'https://restaurant-api.dicoding.dev',
+  BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/',
   VERSION: new Date().toISOString(),
   DATABASE_NAME: 'kopitiam-db',
   DATABASE_VERSION: 1,
